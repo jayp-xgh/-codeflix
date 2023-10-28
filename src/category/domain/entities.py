@@ -6,6 +6,4 @@ class Category:
     name: str
     description: Optional[str] = None
     is_active: Optional[bool] = True
-    create_at: Optional[datetime] = field(default_factory=datetime.now)
-
-
+    create_at: Optional[datetime] = field(default_factory=lambda: datetime.now)
