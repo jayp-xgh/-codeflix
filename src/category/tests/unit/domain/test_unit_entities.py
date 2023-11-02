@@ -29,8 +29,8 @@ class TestCategoryUnit(unittest.TestCase):
         self.assertEqual(category.created_at, created_at)
 
     def test_if_created_at_is_generated_in_constructor(self):
-        category1 = Category('Movie 1')
-        category2 = Category('Movie 2')
+        category1 = Category(name = 'Movie 1')
+        category2 = Category(name = 'Movie 2')
         self.assertNotEqual(
             category1.created_at.timestamp(), 
             category2.created_at.timestamp()
