@@ -13,8 +13,8 @@ class TestUniqueEntityIdUnit(unittest.TestCase):
         with patch.object(
             UniqueEntityId,
             '_UniqueEntityId__validate',
-            autospec = True,
-            side_effect = UniqueEntityId._UniqueEntityId__validate
+            autospec=True,
+            side_effect=UniqueEntityId._UniqueEntityId__validate
         ) as mock_validate:
             with self.assertRaises(InvalidUuidException) as assert_error:
                 UniqueEntityId('fake id')
@@ -25,8 +25,8 @@ class TestUniqueEntityIdUnit(unittest.TestCase):
         with patch.object(
             UniqueEntityId,
             '_UniqueEntityId__validate',
-            autospec = True,
-            side_effect = UniqueEntityId._UniqueEntityId__validate
+            autospec=True,
+            side_effect=UniqueEntityId._UniqueEntityId__validate
         ) as mock_validate:
             value_object = UniqueEntityId('7a6424d7-9775-4a5c-8c01-bc635b66e72a')
             mock_validate.assert_called_once()
@@ -40,8 +40,8 @@ class TestUniqueEntityIdUnit(unittest.TestCase):
         with patch.object(
             UniqueEntityId,
             '_UniqueEntityId__validate',
-            autospec = True,
-            side_effect = UniqueEntityId._UniqueEntityId__validate
+            autospec=True,
+            side_effect=UniqueEntityId._UniqueEntityId__validate
         ) as mock_validate:
             value_object = UniqueEntityId()
             uuid.UUID(value_object.id)
